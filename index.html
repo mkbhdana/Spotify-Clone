@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://open.scdn.co/cdn/images/favicon32.8e66b099.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+
+    <title>Spotify - Your Listening Is Here</title>
+</head>
+
+<body>
+
+    <div class="grid-container">
+        <div class="menu">
+            <div class="flexmenu">
+                <div class="logo">
+                    <img src="/assets/asset 59.svg" alt="logo">
+                </div>
+                <div class="menulist">
+                    <img src="/assets/asset 60.svg" alt="">
+                    <span>Home</span>
+                </div>
+                <div class="menulist">
+                    <img src="/assets/asset 62.svg" alt="">
+                    <span>Search</span>
+                </div>
+                <div class="menulist">
+                    <img src="/assets/asset 64.svg" alt="">
+                    <span>Your Library</span>
+                </div>
+                <div class="playlist">
+                    <img src="/assets/asset 66.svg" alt="">
+                    <span>Create Playlist</span>
+                </div>
+                <div class="liked">
+                    <i>
+
+                        <img src="/assets/asset 67.svg" alt="">
+                    </i>
+                    <span>Liked Songs</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main">
+            <div class="top">
+                <div class="flextop">
+                    <div class="flextopimg"><img srcset="/assets/00.jpg" alt=""></div>
+
+                    <div class="textbox">
+                        <h5>PLAYLIST</h5>
+                        <h1>Liked Songs</h1>
+                    </div>
+                </div>
+            </div>
+            <!-- Large Play/Pause Button -->
+            <div class="songcontainer">
+
+
+                <div class="ply">
+                    <i class="playpause fa-solid fa-circle-play" id="playpause"></i>
+                </div>
+                <!-- Table for Track List -->
+                <div class="track-list">
+                    <table cellspacing="0" width="1200">
+                        <!-- Table Heading Section -->
+                        <thead>
+                            <tr>
+                                <th class="numberlist" width="5%">#</th>
+                                <th class="head1" width="40%">TITLE</th>
+                                <th width="25%">ALBUM</th>
+                                <th width="15%">DATE RELEASE</th>
+                                <th width="5%"></th>
+                                <th width="12%">
+                                    <img class="durationicon" src="/assets/durationicon.svg" alt="duration">
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <!-- Table Song details -->
+                        <tbody>
+                        </tbody>
+
+
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Player Section -->
+        <div class="player">
+            <!-- Define the section for displaying details -->
+            <div class="details">
+                <div id="details1">
+                    <div class="trackart">
+                        <img src="" alt="">
+                    </div>
+                    <div class="songdetails">
+                        <h3 class="trackname"></h3>
+                        <h5 class="trackartist"></h5>
+                    </div>
+
+                </div>
+                <div>
+                    <img src="/assets/sound.gif" width="42px" alt="" id="gif">
+                </div>
+                <div>
+                    <img class="svg1" src="/assets/asset 72.svg" alt="">
+                </div>
+            </div>
+
+
+            <!-- Define the section for displaying track buttons -->
+            <div class="buttons">
+                <div class="p-icons">
+                    <!-- <i class="fa-solid fa-shuffle" id="shuffle"></i> -->
+                    <i class="fa-solid fa-backward-step" id="previous"></i>
+                    <i class="playpause fa-solid fa-circle-play" id="playpause_btn"></i>
+                    <i class="fa-solid fa-forward-step" id="next"></i>
+                    <!-- <i class="fa-solid fa-repeat" id="repeat-plst" title="Playlist Looped"></i> -->
+                </div>
+                <!-- Define the section for displaying the seek slider-->
+                <div class="slider_container">
+                    <div class="current-time">0:00</div>
+                    <div class="seekbar-container">
+                        <div class="seekbar"></div>
+                    </div>
+                    <div class="t-duration">3:56</div>
+                </div>
+            </div>
+
+            <!-- Define the section for displaying the volume slider-->
+            <div class="psection3">
+                <div>
+                    <img src="/assets/dance.gif" width="42px" alt="" id="giif">
+                </div>
+                <i class="fa-solid fa-volume-high" id="mute"></i>
+                <div class="slider">
+                    <input type="range" id="volume_slider" min="1" max="100" value="100" onchange="setVolume()">
+                    <progress min="0" max="100" value="100"></progress>
+                </div>
+
+                <!-- <div class="volume-container">
+                        <div class="volumebar"></div>
+                    </div> -->
+
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/210c497caf.js" crossorigin="anonymous"></script>
+    <script async src="js/script.js"></script>
+
+</body>
+
+</html>
