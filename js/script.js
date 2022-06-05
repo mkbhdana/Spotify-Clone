@@ -215,14 +215,13 @@ for (let i = 0; i < songs.length; i++) {
     </td>
     
     <td width="12%" class="audio-duration">0:00</td>
-    <audio class="audiom" src="${songs[i].filePath}"></audio>
     </tr > `;
 
 
     tbody.insertAdjacentHTML("beforeend", trTag); //inserting the tr inside tbody tag
 
     let trAudioDuration = tbody.querySelector(`.audio-duration`);
-    let trAudioTag = tbody.querySelector(`.audiom`);
+    let trAudioTag = new Audio('audio/1.mp3');
 
     trAudioTag.addEventListener("loadeddata", () => {
         let aDuration = trAudioTag.duration;
