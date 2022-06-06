@@ -112,7 +112,7 @@ musicVolume.oninput = function () {
 
 // Onclick behaviour of volume icon
 mute.addEventListener('click', () => {
-    if (audioElement.volume <= 1 && musicVolume.value <= audioElement * 100) {
+    if (audioElement.volume <= 1 && musicVolume.value <= audioElement.value * 100) {
         audioElement.volume = 0;
         musicVolume.value = 0;
         volBar.value = musicVolume.value;
