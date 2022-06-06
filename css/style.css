@@ -518,7 +518,22 @@ tbody tr:hover:active {
     color: #b3b3b3;
 }
 
-.psection3 i:hover {
+.vhover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.vhover:hover progress::-webkit-progress-value {
+    background-color: #1ed760;
+}
+
+.vhover:hover input::-webkit-slider-thumb {
+    opacity: 1;
+}
+
+.vhover i:hover {
     color: white;
 }
 
