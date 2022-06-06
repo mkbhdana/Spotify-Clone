@@ -103,7 +103,6 @@ audioElement.addEventListener("ended", (event) => {
 // Handle volume change
 function setVolume() {
     audioElement.volume = musicVolume.value / 100;
-    mute.classList.replace('fa-volume-low', 'fa-volume-high');
 }
 
 // Handle volume progress
