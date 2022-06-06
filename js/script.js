@@ -116,13 +116,13 @@ mute.addEventListener('click', () => {
         audioElement.volume = 0;
         musicVolume.value = 0;
         volBar.value = musicVolume.value;
-        mute.classList.replace('fa-volume-high', 'fa-volume-low');
+        mute.classList.replace('fa-volume-high', 'fa-volume-xmark');
 
     } else {
         audioElement.volume = 1;
         musicVolume.value = 100;
         volBar.value = musicVolume.value;
-        mute.classList.replace('fa-volume-low', 'fa-volume-high');
+        mute.classList.replace('fa-volume-xmark', 'fa-volume-high');
     }
 });
 
