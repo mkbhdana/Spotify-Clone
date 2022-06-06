@@ -103,6 +103,7 @@ audioElement.addEventListener("ended", (event) => {
 // Handle volume change
 function setVolume() {
     audioElement.volume = musicVolume.value / 100;
+    mute.classList.replace('fa-volume-xmark', 'fa-volume-high');
 }
 
 // Handle volume progress
@@ -126,6 +127,14 @@ mute.addEventListener('click', () => {
     }
 });
 
+//Setting low & high icon on volume change
+musicVolume.addEventListener('mousemove', () => {
+    if (audioElement.volume >= 0.1 && audioElement.volume <= 0.5) {
+        mute.classList.replace('fa-volume-high', 'fa-volume-low');
+    } else {
+        mute.classList.replace('fa-volume-low', 'fa-volume-high');
+    }
+});
 
 // Handle play/pause click
 masterPlay.addEventListener('click', () => {
