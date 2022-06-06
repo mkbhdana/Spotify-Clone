@@ -129,7 +129,7 @@ mute.addEventListener('click', () => {
 
 //Setting low & high icon on volume change
 musicVolume.addEventListener('mousemove', () => {
-    if (audioElement.volume >= 0.1 && audioElement.volume <= 0.5) {
+    if (audioElement.volume >= 0.01 && audioElement.volume <= 0.3) {
         mute.classList.replace('fa-volume-high', 'fa-volume-low');
     } else {
         mute.classList.replace('fa-volume-low', 'fa-volume-high');
