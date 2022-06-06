@@ -515,6 +515,10 @@ tbody tr:hover:active {
 }
 
 .psection3 i {
+    color: #b3b3b3;
+}
+
+.psection3 i:hover {
     color: white;
 }
 
