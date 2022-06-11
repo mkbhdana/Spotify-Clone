@@ -86,7 +86,7 @@ body {
     justify-content: center;
 
     grid-template-columns: 0.16fr 1fr;
-    grid-template-rows: 1fr 0.32fr;
+    grid-template-rows: 1fr 0.34fr;
     /* grid-template-areas:
         "sidebar top top top"
     "sidebar main "
