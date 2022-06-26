@@ -242,7 +242,7 @@ for (let i = 0; i < songs.length; i++) {
         let totalMin = Math.floor(aDuration / 60);
         let totalSec = Math.floor(aDuration % 60);
         if (totalSec < 10) {
-            totalSec = `0${totalSec}`;
+            totalSec = `0:${totalSec}`;
         };
         trAudioDuration.innerText = `${totalMin}:${totalSec}`; //passing total duation of song
     });
