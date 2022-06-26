@@ -209,11 +209,11 @@ const tbody = document.querySelector("tbody");
 // let create tr tags according to array length for list
 for (let i = 0; i < songs.length; i++) {
     //let's pass the song details from the array
-    let trTag = `<tr tr-index="${i}">
+    let trTag = `<tr tr-index=${i}>
     <td class="numberlist" width="5%">${songs[i].nmbr}</td>
     <td class="title" width="80%">
         <div>
-            <img class="cover1" src="${songs[i].coverPath}" alt="">
+            <img class="cover1" src=${songs[i].coverPath} alt="">
         </div>
         <div class="songdetails">
             <h3>${songs[i].trackName}</h3>
@@ -234,7 +234,7 @@ for (let i = 0; i < songs.length; i++) {
 
     tbody.insertAdjacentHTML("beforeend", trTag); //inserting the tr inside tbody tag
 
-    let trAudioDuration = tbody.querySelector(`.audio-duration`);
+    let trAudioDuration = tbody.querySelector('.audio-duration');
     let trAudioTag = new Audio('audio/1.mp3');
 
     trAudioTag.addEventListener("loadeddata", () => {
@@ -242,7 +242,7 @@ for (let i = 0; i < songs.length; i++) {
         let totalMin = Math.floor(aDuration / 60);
         let totalSec = Math.floor(aDuration % 60);
         if (totalSec < 10) {
-            totalSec = `${totalSec} `;
+            totalSec = `0${totalSec}`;
         };
         trAudioDuration.innerText = `${totalMin}:${totalSec}`; //passing total duation of song
     });
