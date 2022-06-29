@@ -1,5 +1,3 @@
-console.log("Welcome to Spotify");
-
 let songIndex = 0;
 let masterPlay = document.getElementById('playpause_btn');
 let playPausebtn = document.getElementById('playpause');
@@ -166,7 +164,7 @@ document.getElementById('previous').addEventListener('click', () => {
 
 // Update progressbar according to current music time 
 audioElement.addEventListener("timeupdate", () => {
-    progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
+    const progress = parseInt((audioElement.currentTime / audioElement.duration) * 100);
     myProgressBar.style.width = `${progress}%`;
 
     audioElement.addEventListener("loadeddata", () => {
