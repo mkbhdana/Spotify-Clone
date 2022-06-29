@@ -3,7 +3,7 @@ let masterPlay = document.getElementById('playpause_btn');
 let playPausebtn = document.getElementById('playpause');
 let gif = document.getElementById('gif', 'giif');
 let giif = document.getElementById('giif');
-let audioElement = new Audio ('audio/1.mp3');
+let audioElement = new Audio ('audio/music-1.mp3');
 let trackArt = document.querySelector(".trackart img");
 let trackName = document.querySelector(".trackname");
 let trackArtist = document.querySelector(".trackartist");
@@ -16,17 +16,17 @@ let mute = document.getElementById('mute');
 let volBar = document.querySelector("progress");
 
 
-let songs = [
-    { nmbr: "1", trackName: "Kesariya Mashup", trackArtist: "Jay Guldekar", trackAlbum: "Bollywood (Lofi)", date: "May 14, 2022", filePath: "audio/1.mp3", coverPath: "covers/1.jpg" },
-    { nmbr: "2", trackName: "Heat Waves", trackArtist: "Glass Anmals", trackAlbum: "Dreamland (+Bonus Levels)", date: "Jun 30, 2020", filePath: "audio/2.mp3", coverPath: "covers/2.jpg" },
-    { nmbr: "3", trackName: "Jab Bhi Koi Haseena", trackArtist: "KK", trackAlbum: "Hera Pheri", date: "Mar 31, 2000", filePath: "audio/3.mp3", coverPath: "covers/3.jpg" },
-    { nmbr: "4", trackName: "Stay (with Justin Bieber)", trackArtist: "The Kid LAROI, Justin Beiber", trackAlbum: "Stay (with Justin Bieber)", date: "Jul 19, 2021", filePath: "audio/4.mp3", coverPath: "covers/4.jpg" },
-    { nmbr: "5", trackName: "Shankara - Original Mix", trackArtist: "Spirtual Mudra", trackAlbum: "Shankara - Om Namah Shivaay", date: "Aug 15, 2019", filePath: "audio/5.mp3", coverPath: "covers/5.jpg" },
-    { nmbr: "6", trackName: "Love Never Felt So Good", trackArtist: "Michael Jackson, Justin Timberlake", trackAlbum: "XSCAPE", date: "May 02, 2014", filePath: "audio/6.mp3", coverPath: "covers/6.jpg" },
-    { nmbr: "7", trackName: "Smooth Criminal - 2012 Remastered", trackArtist: "Michael Jackson", trackAlbum: "Bad 25th Anniversary", date: "Sep 18, 2012", filePath: "audio/7.mp3", coverPath: "covers/7.jpg" },
-    { nmbr: "8", trackName: "In The End - Mellen Gi Remix", trackArtist: "Tommee Profitt, Fleurie, Mellen Gi", trackAlbum: "In The End", date: "Oct 09, 2018", filePath: "audio/8.mp3", coverPath: "covers/8.jpg" },
-    { nmbr: "9", trackName: "Kahin To", trackArtist: "Rashid Ali, Vasundhara Das", trackAlbum: "Jaane Tu... Ya Jaane Na", date: "Jul 04, 2008", filePath: "audio/9.mp3", coverPath: "covers/9.jpg" },
-    { nmbr: "10", trackName: "Shershah X Kabir Singh Mashup", trackArtist: "Sickved", trackAlbum: "Shershah, Kabir Singh", date: "Sep 20, 2021", filePath: "audio/10.mp3", coverPath: "covers/10.jpg" },
+const songs = [
+    { nmbr: "1", trackName: "Kesariya Mashup", trackArtist: "Jay Guldekar", trackAlbum: "Bollywood (Lofi)", date: "May 14, 2022", src: "music-1", filePath: "audio/music-1.mp3", coverPath: "covers/cover-1.jpg" },
+    { nmbr: "2", trackName: "Heat Waves", trackArtist: "Glass Anmals", trackAlbum: "Dreamland (+Bonus Levels)", date: "Jun 30, 2020", src: "music-2", filePath: "audio/music-2.mp3", coverPath: "covers/cover-2.jpg" },
+    { nmbr: "3", trackName: "Jab Bhi Koi Haseena", trackArtist: "KK", trackAlbum: "Hera Pheri", date: "Mar 31, 2000", src: "music-3", filePath: "audio/music-3.mp3", coverPath: "covers/cover-3.jpg" },
+    { nmbr: "4", trackName: "Stay (with Justin Bieber)", trackArtist: "The Kid LAROI, Justin Beiber", trackAlbum: "Stay (with Justin Bieber)", date: "Jul 19, 2021", src: "music-4", filePath: "audio/music-4.mp3", coverPath: "covers/cover-4.jpg" },
+    { nmbr: "5", trackName: "Shankara - Original Mix", trackArtist: "Spirtual Mudra", trackAlbum: "Shankara - Om Namah Shivaay", date: "Aug 15, 2019", src: "music-5", filePath: "audio/music-5.mp3", coverPath: "covers/cover-5.jpg" },
+    { nmbr: "6", trackName: "Love Never Felt So Good", trackArtist: "Michael Jackson, Justin Timberlake", trackAlbum: "XSCAPE", date: "May 02, 2014", src: "music-6", filePath: "audio/music-6.mp3", coverPath: "covers/cover-6.jpg" },
+    { nmbr: "7", trackName: "Smooth Criminal - 2012 Remastered", trackArtist: "Michael Jackson", trackAlbum: "Bad 25th Anniversary", date: "Sep 18, 2012", src: "music-7", filePath: "audio/music-7.mp3", coverPath: "covers/cover-7.jpg" },
+    { nmbr: "8", trackName: "In The End - Mellen Gi Remix", trackArtist: "Tommee Profitt, Fleurie, Mellen Gi", trackAlbum: "In The End", date: "Oct 09, 2018", src: "music-8", filePath: "audio/music-8.mp3", coverPath: "covers/cover-8.jpg" },
+    { nmbr: "9", trackName: "Kahin To", trackArtist: "Rashid Ali, Vasundhara Das", trackAlbum: "Jaane Tu... Ya Jaane Na", date: "Jul 04, 2008", src: "music-9", filePath: "audio/music-9.mp3", coverPath: "covers/cover-9.jpg" },
+    { nmbr: "10", trackName: "Shershah X Kabir Singh Mashup", trackArtist: "Sickved", trackAlbum: "Shershah, Kabir Singh", date: "Sep 20, 2021", src: "music-10", filePath: "audio/music-10.mp3", coverPath: "covers/cover-10.jpg" },
 
 ];
 
@@ -226,14 +226,15 @@ for (let i = 0; i < songs.length; i++) {
         <img class="svg1" src="/assets/asset 72.svg" alt="">
     </td>
     
-    <td width="12%" class="audio-duration">0:00</td>
+    <td width="12%" id="${songs[i].src}" class="audio-duration">0:00</td>
+    <audio class="${songs[i].src}" src="${songs[i].filePath}"> </audio>
     </tr > `;
 
 
     tbody.insertAdjacentHTML("beforeend", trTag); //inserting the tr inside tbody tag
 
-    let trAudioDuration = tbody.querySelector('.audio-duration');
-    let trAudioTag = new Audio('audio/1.mp3');
+    let trAudioDuration = tbody.querySelector(`#${songs[i].src}`);
+    let trAudioTag = tbody.querySelector(`.${songs[i].src}`);
 
     trAudioTag.addEventListener("loadeddata", () => {
         let aDuration = trAudioTag.duration;
