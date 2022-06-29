@@ -30,7 +30,7 @@ let songs = [
     { nmbr: "9", trackName: "Kahin To", trackArtist: "Rashid Ali, Vasundhara Das", trackAlbum: "Jaane Tu... Ya Jaane Na", date: "Jul 04, 2008", filePath: "audio/9.mp3", coverPath: "covers/9.jpg" },
     { nmbr: "10", trackName: "Shershah X Kabir Singh Mashup", trackArtist: "Sickved", trackAlbum: "Shershah, Kabir Singh", date: "Sep 20, 2021", filePath: "audio/10.mp3", coverPath: "covers/10.jpg" },
 
-]
+];
 
 
 window.addEventListener("load", () => {
