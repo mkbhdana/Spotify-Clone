@@ -172,8 +172,8 @@ audioElement.addEventListener("timeupdate", () => {
     audioElement.addEventListener("loadeddata", () => {
         // Update song total duration
         let audioDuration = audioElement.duration;
-        let totalMin = Math.floor(audioDuration / 60);
-        let totalSec = Math.floor(audioDuration % 60);
+        let totalMin = parseInt(audioDuration / 60);
+        let totalSec = parseInt(audioDuration % 60);
         if (totalSec < 10) {
             totalSec = `0${totalSec}`;
         };
@@ -181,8 +181,8 @@ audioElement.addEventListener("timeupdate", () => {
     });
 
     // Update playing song current time
-    let currentMin = Math.floor(audioElement.currentTime / 60);
-    let currentSec = Math.floor(audioElement.currentTime % 60);
+    let currentMin = parseInt(audioElement.currentTime / 60);
+    let currentSec = parseInt(audioElement.currentTime % 60);
     if (currentSec < 10) {
         currentSec = `0${currentSec}`;
     };
@@ -239,8 +239,8 @@ for (let i = 0; i < songs.length; i++) {
 
     trAudioTag.addEventListener("loadeddata", () => {
         let aDuration = trAudioTag.duration;
-        let totalMin = Math.floor(aDuration / 60);
-        let totalSec = Math.floor(aDuration % 60);
+        let totalMin = parseInt(aDuration / 60);
+        let totalSec = parseInt(aDuration % 60);
         if (totalSec < 10) {
             totalSec = `0${totalSec}`;
         };
