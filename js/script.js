@@ -274,6 +274,15 @@ function clicked(element) {
     playingNow();
 };
 
+// Handles play/pause of the current song on keypress
+document.addEventListener('keydown', function (e) {
+    if (e.key === ' ') {
+        e.preventDefault();
+        playPause();
+        playingNow();
+    }
+});
+
 
 
 
