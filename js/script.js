@@ -226,14 +226,14 @@ for (let i = 0; i < songs.length; i++) {
         <img class="svg1" src="/assets/asset 72.svg" alt="">
     </td>
     
-    <td width="12%" id="${songs[i].src}" class="audio-duration">0:00</td>
+    <td width="12%" class="audio-duration">0:00</td>
     <audio class="${songs[i].src}" src="${songs[i].filePath}"> </audio>
     </tr > `;
 
 
     tbody.insertAdjacentHTML("beforeend", trTag); //inserting the tr inside tbody tag
 
-    let trAudioDuration = tbody.querySelector(`#${songs[i].src}`);
+    let trAudioDuration = tbody.querySelector(`tr[tr-index='${i}'] .audio_duration`);
     let trAudioTag = tbody.querySelector(`.${songs[i].src}`);
 
     trAudioTag.addEventListener("loadeddata", () => {
