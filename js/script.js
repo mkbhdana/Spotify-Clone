@@ -226,7 +226,7 @@ for (let i = 0; i < songs.length; i++) {
         <img class="svg1" src="/assets/asset 72.svg" alt="">
     </td>
     
-    <td width="12%" class="audio-duration">0:00</td>
+    <td width="12%" class="audio_duration">0:00</td>
     <audio class="${songs[i].src}" src="${songs[i].filePath}"> </audio>
     </tr > `;
 
